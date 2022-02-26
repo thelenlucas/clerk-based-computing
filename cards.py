@@ -107,6 +107,9 @@ class clerk(object):
     elif opCode == 7:
       self.reserved_registers[0] = modifier
 
+    #8 pushes {modifier} directly to memory
+    elif opCode == 8:
+      self.memory.push(modifier)
 
 
   #We're going to define a convention that states the first value of the memory

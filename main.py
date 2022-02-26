@@ -9,7 +9,7 @@ Coded by: Lucas Thelen
 """
 
 #Imports our custom library
-import cards, time
+import cards, time, assembler
 
 """
 For the programmer:
@@ -24,8 +24,6 @@ For the programmer:
 """
 
 cpu = cards.clerk()
-
-memory = [0, 1, 0, 0]
 
 #Simple fibbonaci sequence
 code = [
@@ -44,8 +42,7 @@ code = [
   
 ]
 
-cpu.memory.load(memory)
-cpu.program.load(code)
+cpu.program.load(assembler.assemble("fibb.txt"))
 
 
 while True:
